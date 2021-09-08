@@ -1,0 +1,257 @@
+/* Global Variable */
+
+:root {
+  --white-color:#fff;
+  --black-color:#000;
+  --text-color:#333;
+  --red-color:#f44336;
+  --background-hover-color:#ccc;
+  --color-focus-input-mobile-tablet:#e59700;
+  --header-height:46px;
+  --header-form-color:#009688;
+  --border-color:#dbdbdb;
+}
+
+/* Setting all */
+
+* {
+  text-decoration: none;
+  box-sizing: inherit;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+/* Setting html */
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: 'Montserrat', 'Arial' ,sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Để cho thanh cuộn trở nên mượt hơn  */
+}
+
+/* Content Section */
+
+.content-section {
+  max-width: 800px;
+  margin:0 auto;
+  padding:64px 0;
+}
+
+.section-heading {
+  font-size:2.8rem;
+  text-transform:uppercase;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 2.8rem;
+  margin-bottom:34px 0;
+}
+
+.section-sub-heading {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color:var(--text-color);
+}
+
+.section-heading , 
+.section-sub-heading {
+  text-align: center;
+}
+
+.tour-tickets-status {
+  font-size: 1.4rem;
+  background-color: var(--red-color);
+  color:var(--white-color);
+  padding:4px 6px;
+  font-weight: 500;
+  margin:0 8px;
+}
+
+.tour-tickets-heading {
+  font-size: 1.4rem;
+  margin:12px 0;
+}
+
+.tour-tickets-date {
+  font-size: 1.6rem;
+  color:#757575;
+}
+
+.tour-tickets-des {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.tour-tickets-img {
+  padding-top: 79%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+/* Setting button */
+.btn {
+  min-height: 36px;
+  min-width: 96px;
+  background-color: var(--black-color);
+  color:var(--white-color);
+  font-size: 1.4rem;
+  outline: none;
+  border:none;
+  font-weight: 400;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Setting modal */
+
+.modal {
+  position: fixed;
+  top:0;
+  right:0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 21;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 900px;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--white-color);
+  animation:modalSlideDown linear 0.2s;
+}
+
+.modal-close {
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color:var(--white-color);
+  padding:14px 18px;
+  font-weight: 400;
+}
+
+.form-header {
+  background-color: var(--header-form-color);
+  padding:20px 24px;
+}
+
+.form-header-icon {
+  margin-right: 8px;
+  font-size:3rem;
+}
+
+.form-header-heading {
+  font-size: 2.8rem;
+  color:var(--white-color);
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  color:var(--text-color);
+}
+
+.form-modal {
+  margin:14px 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form {
+  margin-top:8px;
+  font-size: 1.3rem;
+  padding:0 8px;
+  height:40px;
+  border-radius: 2px;
+  border:thin solid var(--border-color);
+  font-weight: 500;
+  color:var(--text-color);
+}
+
+.form-content {
+  padding:0 14px;
+}
+
+.btn-modal-submit {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  width: 100%;
+  min-height:40px;
+  background: var(--header-form-color);
+  padding:18px 0;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:14px 0;
+}
+
+.modal-second-close-btn {
+  background-color: #f44336;
+  border:none;
+  font-size: 1.4rem;
+  padding:14px 18px;
+  color:var(--white-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal-help-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.modal-help-link {
+  text-decoration: underline;
+  color:rgb(3, 3, 218);
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,119 @@
+/* For mobile and tablet user */
+
+@media only screen and (max-width:63.9375em) {
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+
+  .content-section {
+    padding:64px 16px;
+  }
+
+  /* focus visible giống với focus */
+  .form-input:focus-visible {
+    border:2px solid var(--color-focus-input-mobile-tablet);
+  } 
+
+  .footer__socials-list .footer__socials-item {
+    margin:0 6px;
+  }
+
+  .footer-info-text-link {
+    padding:6px 0;
+    display: inline-block;
+  }
+
+}
+
+/* For mobile user only */
+
+@media only screen and (max-width:46.1875em) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .team-member-list {
+    display: block;
+  }
+
+  .member-avatar {
+    height: 235px;
+  }
+
+  .tour-tickets-location {
+    margin-bottom: 16px;
+  }
+
+  .slider__text-content {
+    display: none;
+  }
+
+  .header {
+    overflow: hidden;
+  }
+
+
+  /* .header__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+  } */
+
+  .header__navbar-link-has-navbar:hover {
+    background-color: var(--background-hover-color);
+    color:var(--black-color);
+  }
+
+  .header__navbar {
+    display: block;
+  }
+
+  .header__navbar-list > li:first-child {
+    display: inline-block;
+  }
+
+  .header__navbar-list {
+    display: block;
+  }
+
+  .header__navbar-list .header__navbar-item:nth-of-type(2):hover > a ,
+  .header__navbar-list .header__navbar-item:nth-of-type(3):hover > a ,
+  .header__navbar-list .header__navbar-item:nth-of-type(4):hover > a {
+    background-color: none;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .tour-tickets-location {
+    overflow: hidden;
+  }
+
+  .tour-ticket-btn {
+    width: 100%;
+  }
+
+}
+
+/* For tablet user only */
+
+@media only screen and (min-width:46.25em) and (max-width:63.9375em) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
+
+/* For PC user */
+
+@media only screen and (min-width:64em) {
+  .hide-on-pc {
+    display: none;
+  }
+  
+}

@@ -1,0 +1,417 @@
+
+/* Header */
+
+.header {
+  height:46px;
+  background-color: var(--black-color);
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index: 20;
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__navbar-list {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+}
+
+.header__navbar-link {
+  --height:46px;
+  display: block;
+  color:var(--white-color);
+  font-size: 1.45rem;
+  height:var(--height);
+  line-height: var(--height);
+  padding:0 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* CSS select > là con trực tiếp */
+
+.header__navbar-list > .header__navbar-item:hover > a ,
+.header__navbar-list-second > .header__navbar-list-second-item:hover > a {
+  background-color: var(--background-hover-color);
+  color:var(--black-color);
+}
+
+.header__navbar-item--has-list {
+  position: relative;
+}
+
+.header__navbar-list-second {
+  position: absolute;
+  top:100%;
+  left:0;
+  padding-left: 0;
+  background-color: var(--white-color);
+  width: 150px;
+  display: none;
+  z-index: 99;
+}
+
+.header__navbar-list-second-link {
+  display: block;
+  font-size: 1.45rem;
+  padding:8px 16px;
+  color:var(--text-color);
+  font-weight: 500;
+}
+
+/* Hover effect */
+.header__navbar-item--has-list:hover .header__navbar-list-second {
+  display: block;
+}
+
+/* Mobile navbar */
+
+.header__mobile-navbar {
+  position: absolute;
+  top:100%;
+  background-color: var(--black-color);
+  left:0;
+  right:0;
+  display: none;
+}
+
+.header__navbar-item-navbar {
+  position: relative;
+}
+
+.header__navbar-mobile-list {
+  margin:0;
+  padding-left: 0;
+}
+
+.header__navbar-link-has-navbar:hover ~ .header__mobile-navbar {
+  display: block;
+}
+
+.header__navbar-mobile-link {
+  display: block;
+  font-size: 1.45rem;
+  color:var(--white-color);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding:16px 24px;
+}
+
+/* Header Search */
+
+.header__search {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__navbar-mobile-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 46px;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
+.header__navbar-icon ,
+.header__search-icon {
+  font-size: 1.45rem;
+  color:var(--white-color);
+}
+
+.header__search:hover {
+  background-color: #f44336;
+}
+
+.header__navbar-mobile-btn:hover {
+  background-color: var(--background-hover-color);
+}
+
+.header__navbar-mobile-btn:hover i {
+  color:var(--black-color);
+}
+
+/* Slider */
+
+.slider {
+  margin-top:46px;
+  padding-top:50%; /* 50% là chiều ngang của chính nó */
+  /* background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; */
+  background: url("../img/chicago.jpg") top center / cover no-repeat;
+  position: relative;
+}
+
+.slider__text-content {
+  position: absolute;
+  bottom:32px;
+  left:0;
+  right:0;
+  /* transform: translateX(-50%); */
+  user-select: none;
+  color:var(--white-color);
+}
+
+.slider__text-heading {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.slider__text-des {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin:25px 0;
+} 
+
+.slider__text-heading ,
+.slider__text-des {
+  text-shadow: 0 0 1px var(--black-color);
+}
+
+/* App content */
+
+
+/* About */
+
+.about-content {
+  text-align: justify;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.team-member-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.member-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.member-avatar {
+  height: 154px;
+  border-radius: 4px;
+}
+
+.member-item {
+  flex: 1;
+  text-align:center;
+}
+
+/* Tour */
+
+.tour-background {
+  background-color: var(--black-color);
+}
+
+.section-heading-tour ,
+.section-sub-heading-tour {
+  color:var(--white-color);
+}
+
+.section-sub-heading-tour {
+  color:rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.tour-tickets-list {
+  height:118px;
+  background-color: var(--white-color);
+  padding-left: 0;
+  overflow: hidden;
+  margin:32px 0;
+}
+
+.tour-tickets-item--has-border {
+  border-top:thin solid rgba(0, 0, 0, 0.1);
+  border-bottom: thin solid rgba(0, 0, 0, 0.1);
+}
+
+.tour-tickets-item {
+  display: flex;
+  align-items: center;
+  padding:8px 16px;
+}
+
+.tour-tickets-text {
+  margin:0;
+  /* padding: 11px 16px; */
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color:#757575;
+}
+
+.tour-tickets-item--not-full {
+  justify-content: space-between;
+}
+
+.tour-tickets-amount {
+  background-color: var(--black-color);
+  font-size: 1.35rem;
+  color:var(--white-color);
+  padding:4px 8px;
+  border-radius: 100%;
+  margin:0 16px;
+  user-select: none;
+}
+
+/* Location */
+
+.tour-tickets-location--place {
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+.tour-tickets-info {
+  padding: 0 12px;
+}
+
+.tour-ticket-btn {
+  margin:12px 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+}
+
+.tour-tickets-img:hover {
+  filter: brightness(60%);
+}
+
+.tour-ticket-btn:hover {
+  background-color: var(--background-hover-color);
+  color:var(--black-color);
+}
+
+.button {
+  width: 100%;
+}
+
+/* Contact */
+
+.contact-info {
+  padding:28px 0;
+}
+
+.contact-info-icon {
+  margin:0 14px 0 0;
+}
+
+.contact-info-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-input {
+  width: 100%;
+  height:40px;
+  font-size: 1.4rem;
+  padding:0 12px;
+  border:thin solid #dbdbdb;
+  border-radius: 2px;
+}
+
+.form-input:focus {
+  border:thin solid var(--black-color);
+}
+
+.btn-submit {
+  float:right;
+  min-width: 76px;
+}
+
+.btn-submit:hover {
+  background-color: var(--background-hover-color);
+  color:var(--black-color);
+}
+
+
+/* Map background */
+.map-background {
+  padding-top: 50%;
+  background: url("../img/map.jpg") top center / cover no-repeat;
+  filter: grayscale(50%);
+}
+
+/* Footer */
+
+.footer {
+  padding:64px 16px;
+}
+
+.footer__socials-list {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__socials-item {
+  margin:0 2px;
+}
+
+.footer__socials-link {
+  display: block;
+  font-size: 2.2rem;
+  color:#757575;
+}
+
+.footer__socials-item:hover a {
+  color:#afaeae;
+}
+
+.footer-info-text , 
+.footer-info-text-link {
+  font-size: 1.35rem;
+  text-align: center;
+  color:var(--text-color);
+}
+
+.footer-info-text-link {
+  text-decoration: underline;
+}
+
+/* Modal */
+
+.btn-modal-submit:hover ,
+.modal-close-btn:hover {
+  background: var(--background-hover-color);
+  color:var(--black-color);
+}
+
+.modal.open {
+  display: flex;
+}
+
+.form-group.invalid .input-form {
+  border: thin solid red;
+}
+
+.form-error-message {
+  font-size: 1.4rem;
+  color:red;
+  font-weight: 500;
+  display: block;
+  margin:4px 0;
+}
